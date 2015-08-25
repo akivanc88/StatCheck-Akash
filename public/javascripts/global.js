@@ -81,6 +81,7 @@ function letsGetMasteries(summonerID,summonerLevel) {
     var total_towers = 0;
     var total_wins = 0;
     var total_losses = 0;
+    var win_loss_ratio =0;
     $.ajax({
         type: 'DELETE',
         url: '/users/deleteuser/' + $(this).attr('rel')
@@ -174,7 +175,7 @@ function letsGetMasteries(summonerID,summonerLevel) {
 
 
                 if(typeof losses == 'undefined'){
-                    wins = "100%";
+                        wins = "100%";
                 }else{
                     wins = ((wins/(wins+losses))*100) + "%";
                 }
@@ -194,7 +195,11 @@ function letsGetMasteries(summonerID,summonerLevel) {
             document.getElementById("sAssists").innerHTML = total_assists;
             document.getElementById("sKills").innerHTML = total_kills;
             document.getElementById("sTurrets").innerHTML = total_towers;
-            document.getElementById("sWins").innerHTML =  total_wins;
+            if(typeof total_losses != 'undefined'){
+            document.getElementById("sWins").innerHTML =  total_wins/total_losses;
+            } else{
+                document.getElementById("sWins").innerHTML = '100';
+            }
             asda = getMongoBest(summonerID);
             setTimeout(function(){},10000);
             var best = $('input#inputSummonerName').val() + " Level " + summonerLevel + " has the best record by " + parseFloat(tet2).toFixed(3)+ "% in "+gameType+".";
