@@ -1,0 +1,58 @@
+extends layout
+
+block content
+    h1= title
+    p Welcome to StatCheck
+
+    // Wrapper
+    #wrapper
+
+
+        // SUMMONER INFO
+        #userList
+            h2 Summoner Statistics(Aggregated)
+            p
+                strong Total Kills:
+                |  <span id='sKills'></span>
+                br
+                strong Total Assists:
+                |  <span id='sAssists'></span>
+                br
+                strong Total Turrets Destroyed:
+                |  <span id='sTurrets'></span>
+                br
+                strong Wins/Loss Ratio:
+                |  <span id='sWins'></span>
+        // /SUMMONER INFO
+
+
+        // USER LIST
+        h2 Summoner Detail
+        #userList
+            table
+                thead
+                    th Match Type
+                    th Avg. Total Kills
+                    th Avg. Total Assists
+                    th Win/Loss Ratio
+                    th Avg.Total Turrets Destroyed
+                tbody
+        // /USER LIST
+
+        // ADD USER
+        h2 Compare Summoner
+        #FindSummoner
+            fieldset
+                input#inputSummonerName(type='text', placeholder='Summonername')
+                //input#inputUserEmail(type='text', placeholder='Email')
+                //br
+                //input#inputUserFullname(type='text', placeholder='Full Name')
+                //input#inputUserAge(type='text', placeholder='Age')
+                //br
+                //input#inputUserLocation(type='text', placeholder='Location')
+                //input#inputUserGender(type='text', placeholder='gender')
+                br
+                button#btnFindSummoner Find
+        // /ADD USER
+
+    // /WRAPPER

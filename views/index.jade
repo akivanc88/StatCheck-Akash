@@ -1,0 +1,205 @@
+extends layout
+
+block content
+    #wrapper
+        div(style='overflow:hidden;')
+            header#header.header
+                // header-start
+                .container
+                    figure.logo.animated.fadeInDown.delay-07s
+                        a(href='#')
+                            img(src='img/logo.png', alt='')
+                    h1.animated.fadeInDown.delay-07s Welcome To StatCheck
+            // header-end
+            nav#test.main-nav-outer
+                // main-nav-start
+                .container
+                    ul.main-nav
+                        li
+                            a(href='#header') Home
+                        li
+                            a(href='#service') Summoner Statistics
+                        li.small-logo
+                            a(href='#header')
+                                img(src='img/small-logo.png', alt='')
+                        li
+                            a(href='#Portfolio') Summoner Detail
+                        li
+                            a(href='#team') Team
+                        li
+                            a(href='#contact') Contact
+                    a.res-nav_click(href='#')
+                        i.fa-bars
+            // main-nav-end
+            section#service.main-section
+                // main-section-start
+                .container
+                    h2 Summoner Statistics (Aggregated)
+                    h6 Last updated 23rd August 2015.
+                    .row
+                        .col-lg-4.col-sm-6.wow.fadeInLeft.delay-05s
+                            .service-list
+                                .service-list-col1
+                                    i.fa-paw
+                                .service-list-col2
+
+                                    h3 Total Kills:
+                                    p <span id='sKills'></span>
+                            .service-list
+                                .service-list-col1
+                                    i.fa-gear
+                                .service-list-col2
+                                    h3 Total Assists:
+                                    p <span id='sAssists'></span>
+                            .service-list
+                                .service-list-col1
+                                    i.fa-apple
+                                .service-list-col2
+                                    h3 Total Turrets Destroyed:
+                                    p <span id='sTurrets'></span>
+                            .service-list
+                                .service-list-col1
+                                    i.fa-medkit
+                                .service-list-col2
+                                    h3 Wins/Loss Ratio:
+                                    p <span id='sWins'></span>
+                        nav#test.main-nav-outer3
+                            .container
+                                ul.main-nav2
+                                    #FindSummoner
+                                    fieldset
+                                    li
+                                        h1#header123.animated.fadeInDown.delay-07s Enter your Summoner Name:
+                                    li
+                                        input#inputSummonerName(placeholder='Lord Imrahail')
+                                    br
+                                    li
+                                        button#btnFindSummoner.link.animated.fadeInUp.delay-1s Find
+
+            // main-section-end
+            section.main-section.alabaster(id='Portfolio')
+                // main-section alabaster-start
+                .container
+                    .row
+                        .col-lg-4.col-sm-6.wow.fadeInLeft.delay-05s
+                            .service-list
+                                .service-list-col1
+                                    i.fa-paw
+                                .service-list-col2
+
+                                    h3 Best Statistics:
+                                    p <span id='sBest'></span>
+                        figure.col-lg-5.col-sm-4.wow.fadeInLeft
+                            img(src='img/iphone.png', alt='')
+                        .col-lg-7.col-sm-8.featured-work
+                            h2 Summoner Statistics Detail
+                            p.padding-b
+                                | Breakdown of Summoner information based off Match Type:
+                            #userList
+                                table
+                                    thead
+                                        th Match Type
+                                        th Avg. Total Kills
+                                        th Avg. Total Assists
+                                        th Win/Loss Ratio
+                                        th Avg.Total Turrets Destroyed
+                                    tbody
+            // main-section alabaster-end
+            section#team.main-section.team
+                // main-section team-start
+                .container
+                    h2 About
+                    h6 The one-man army show
+                    .team-leader-block.clearfix
+                        .team-leader-box
+                        .team-leader-box
+                            .team-leader.wow.fadeInDown.delay-03s
+                                .team-leader-shadow
+                                    a(href='#')
+                                img(src='img/team-leader-pic1.jpg', alt='')
+                                ul
+                                    li
+                                        a.fa-twitter(href='#')
+                                    li
+                                        a.fa-facebook(href='#')
+                                    li
+                                        a.fa-pinterest(href='#')
+                                    li
+                                        a.fa-google-plus(href='#')
+                            h3.wow.fadeInDown.delay-03s Akash Majumder
+                            span.wow.fadeInDown.delay-03s I make things
+                            p.wow.fadeInDown.delay-03s
+                                | Akash created this website in under 2 days. I know, very impressive. He eats food occasionally.
+                        .team-leader-box
+            // main-section team-end
+            section.business-talking
+                // business-talking-start
+                .container
+                    h2 Let's Talk Business.
+            // business-talking-end
+            .container
+                section#contact.main-section.contact
+                    .row
+                        .col-lg-6.col-sm-7.wow.fadeInLeft
+                            .contact-info-box.address.clearfix
+                                h3
+                                    i.icon-map-marker
+                                    | Address:
+                                span
+                                    | 75-8473 163rd Street
+                                    br
+                                    | Surrey, BC V4N 6M7
+                            .contact-info-box.phone.clearfix
+                                h3
+                                    i.fa-phone
+                                    | Phone:
+                                span 1-800-BOO-YAHH
+                            .contact-info-box.email.clearfix
+                                h3
+                                    i.fa-pencil
+                                    | email:
+                                span er.akashmajumder@gmail.com
+                            .contact-info-box.hours.clearfix
+                                h3
+                                    i.fa-clock-o
+                                    | Hours:
+                                span
+                                    strong Monday - Thursday:
+                                    |  10am - 6pm
+                                    br
+                                    strong Friday:
+                                    |  People work on Fridays now?
+                                    br
+                                    strong Saturday - Sunday:
+                                    |  Best not to ask.
+                            ul.social-link
+                                li.twitter
+                                    a(href='#')
+                                        i.fa-twitter
+                                li.facebook
+                                    a(href='#')
+                                        i.fa-facebook
+                                li.pinterest
+                                    a(href='#')
+                                        i.fa-pinterest
+                                li.gplus
+                                    a(href='#')
+                                        i.fa-google-plus
+                                li.dribbble
+                                    a(href='#')
+                                        i.fa-dribbble
+                        .col-lg-6.col-sm-5.wow.fadeInUp.delay-05s
+                            .form
+                                input.input-text(type='text', name='', value='Your Name *', onfocus="if(this.value==this.defaultValue)this.value='';", onblur="if(this.value=='')this.value=this.defaultValue;")
+                                input.input-text(type='text', name='', value='Your E-mail *', onfocus="if(this.value==this.defaultValue)this.value='';", onblur="if(this.value=='')this.value=this.defaultValue;")
+                                textarea.input-text.text-area(cols='0', rows='0', onfocus="if(this.value==this.defaultValue)this.value='';", onblur="if(this.value=='')this.value=this.defaultValue;") Your Message *
+                                input.input-btn(type='submit', value='send message')
+            footer.footer
+                .container
+                    .footer-logo
+                        a(href='#')
+                            img(src='img/footer-logo.png', alt='')
+                    span.copyright
+                        | Copyright © 2015 StatCheck© By
+                        a(href='#') Akash Majumder
+                        | .
