@@ -191,7 +191,7 @@ color: #fff;
 }
 .main-nav2{
 	text-align:center;
-	margin:225px -146px 0 0;
+	margin:125px -146px 0 0;
 	position: relative
 	padding:0;
 	list-style:none;
@@ -202,6 +202,7 @@ color: #fff;
 	margin:10px 0 0px;
 	padding:0;
 	list-style:none;
+	background:url(../img/bg-map.png)
 }
 .main-nav li{
 	display:inline;
